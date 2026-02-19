@@ -1,0 +1,5 @@
+[build]
+buildCommand = "dotnet publish -c Release -o out"
+
+[deploy]
+startCommand = "./out/BookAPI"
