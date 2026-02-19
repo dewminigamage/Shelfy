@@ -6,8 +6,7 @@ export class ThemeService {
 
   constructor() {
     const saved = localStorage.getItem('shelfy-theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (saved === 'dark' || (!saved && prefersDark)) {
+    if (saved === 'dark') {
       this._isDark = true;
       document.body.classList.add('dark');
       document.documentElement.classList.add('dark');
