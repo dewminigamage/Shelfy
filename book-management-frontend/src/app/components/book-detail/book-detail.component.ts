@@ -17,6 +17,11 @@ export class BookDetailComponent implements OnInit {
   loading = true;
   error = '';
   showEditForm = false;
+  imageError = false;
+
+  onImageError(): void {
+    this.imageError = true;
+  }
 
   constructor(
     private route: ActivatedRoute,

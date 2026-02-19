@@ -13,7 +13,7 @@ namespace BookAPI.Services
                 Author = "F. Scott Fitzgerald", 
                 ISBN = "978-0743273565",
                 PublicationDate = new DateTime(1925, 4, 10),
-                ImageUrl = "https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=800&auto=format&fit=crop"
+                ImageUrl = "https://covers.openlibrary.org/b/isbn/9780743273565-L.jpg"
             },
             new Book 
             { 
@@ -22,7 +22,7 @@ namespace BookAPI.Services
                 Author = "Harper Lee", 
                 ISBN = "978-0061120084",
                 PublicationDate = new DateTime(1960, 7, 11),
-                ImageUrl = "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?q=80&w=800&auto=format&fit=crop"
+                ImageUrl = "https://covers.openlibrary.org/b/isbn/9780061120084-L.jpg"
             },
             new Book 
             { 
@@ -31,7 +31,7 @@ namespace BookAPI.Services
                 Author = "George Orwell", 
                 ISBN = "978-0451524935",
                 PublicationDate = new DateTime(1949, 6, 8),
-                ImageUrl = "https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=800&auto=format&fit=crop"
+                ImageUrl = "https://covers.openlibrary.org/b/isbn/9780451524935-L.jpg"
             },
             new Book 
             { 
@@ -39,7 +39,8 @@ namespace BookAPI.Services
                 Title = "Pride and Prejudice", 
                 Author = "Jane Austen", 
                 ISBN = "978-0141439518",
-                PublicationDate = new DateTime(1813, 1, 28)
+                PublicationDate = new DateTime(1813, 1, 28),
+                ImageUrl = "https://covers.openlibrary.org/b/isbn/9780141439518-L.jpg"
             },
             new Book 
             { 
@@ -47,7 +48,8 @@ namespace BookAPI.Services
                 Title = "The Catcher in the Rye", 
                 Author = "J.D. Salinger", 
                 ISBN = "978-0316769174",
-                PublicationDate = new DateTime(1951, 7, 16)
+                PublicationDate = new DateTime(1951, 7, 16),
+                ImageUrl = "https://covers.openlibrary.org/b/isbn/9780316769174-L.jpg"
             },
             new Book 
             { 
@@ -55,7 +57,8 @@ namespace BookAPI.Services
                 Title = "Jane Eyre", 
                 Author = "Charlotte Brontë", 
                 ISBN = "978-0141441146",
-                PublicationDate = new DateTime(1847, 10, 16)
+                PublicationDate = new DateTime(1847, 10, 16),
+                ImageUrl = "https://covers.openlibrary.org/b/isbn/9780141441146-L.jpg"
             },
             new Book 
             { 
@@ -63,7 +66,8 @@ namespace BookAPI.Services
                 Title = "The Lord of the Rings", 
                 Author = "J.R.R. Tolkien", 
                 ISBN = "978-0544003415",
-                PublicationDate = new DateTime(1954, 7, 29)
+                PublicationDate = new DateTime(1954, 7, 29),
+                ImageUrl = "https://covers.openlibrary.org/b/isbn/9780544003415-L.jpg"
             },
             new Book 
             { 
@@ -71,7 +75,8 @@ namespace BookAPI.Services
                 Title = "Moby-Dick", 
                 Author = "Herman Melville", 
                 ISBN = "978-0142437247",
-                PublicationDate = new DateTime(1851, 10, 18)
+                PublicationDate = new DateTime(1851, 10, 18),
+                ImageUrl = "https://covers.openlibrary.org/b/isbn/9780142437247-L.jpg"
             },
             new Book 
             { 
@@ -79,7 +84,8 @@ namespace BookAPI.Services
                 Title = "The Hobbit", 
                 Author = "J.R.R. Tolkien", 
                 ISBN = "978-0547928227",
-                PublicationDate = new DateTime(1937, 9, 21)
+                PublicationDate = new DateTime(1937, 9, 21),
+                ImageUrl = "https://covers.openlibrary.org/b/isbn/9780547928227-L.jpg"
             },
             new Book 
             { 
@@ -87,7 +93,8 @@ namespace BookAPI.Services
                 Title = "Wuthering Heights", 
                 Author = "Emily Brontë", 
                 ISBN = "978-0141439556",
-                PublicationDate = new DateTime(1847, 12, 19)
+                PublicationDate = new DateTime(1847, 12, 19),
+                ImageUrl = "https://covers.openlibrary.org/b/isbn/9780141439556-L.jpg"
             },
             new Book 
             { 
@@ -95,7 +102,8 @@ namespace BookAPI.Services
                 Title = "The Picture of Dorian Gray", 
                 Author = "Oscar Wilde", 
                 ISBN = "978-0141439570",
-                PublicationDate = new DateTime(1890, 7, 1)
+                PublicationDate = new DateTime(1890, 7, 1),
+                ImageUrl = "https://covers.openlibrary.org/b/isbn/9780141439570-L.jpg"
             },
             new Book 
             { 
@@ -103,7 +111,8 @@ namespace BookAPI.Services
                 Title = "The Odyssey", 
                 Author = "Homer", 
                 ISBN = "978-0143109280",
-                PublicationDate = new DateTime(1488, 1, 1)
+                PublicationDate = new DateTime(1488, 1, 1),
+                ImageUrl = "https://covers.openlibrary.org/b/isbn/9780143109280-L.jpg"
             }
         };
 

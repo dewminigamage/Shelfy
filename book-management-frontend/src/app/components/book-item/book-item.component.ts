@@ -13,4 +13,9 @@ export class BookItemComponent {
   @Input() book!: Book;
   @Input() viewMode: 'grid' | 'list' = 'grid';
   @Output() onCardClick = new EventEmitter<void>();
+  imageError = false;
+
+  onImageError(): void {
+    this.imageError = true;
+  }
 }
