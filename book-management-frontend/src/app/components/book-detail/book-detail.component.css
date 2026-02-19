@@ -89,7 +89,7 @@
     sans-serif;
   color: #0f172a;
   display: block;
-  background-color: #f8fafc; /* Matches dashboard layout */
+  background-color: inherit;
   min-height: 100vh;
 }
 
@@ -103,6 +103,9 @@
 /* Header & Back Button */
 .header {
   margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .back-btn {
@@ -260,6 +263,43 @@
   color: #1e293b;
   font-family: 'Inter', sans-serif;
   letter-spacing: -0.02em;
+}
+
+:host-context(body.dark) .info-card {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+:host-context(body.dark) .info-item .label {
+  color: #64748b;
+}
+
+:host-context(body.dark) .info-item .value {
+  color: #f1f5f9;
+}
+
+:host-context(body.dark) .divider {
+  background-color: #334155;
+}
+
+:host-context(body.dark) .book-title {
+  color: #f1f5f9;
+}
+
+:host-context(body.dark) .book-author {
+  color: #94a3b8;
+}
+
+:host-context(body.dark) .detail-page-container {
+  background-color: #0f172a;
+}
+
+:host-context(body.dark) .back-btn {
+  color: #94a3b8;
+}
+
+:host-context(body.dark) .back-btn:hover {
+  color: #818cf8;
 }
 
 .divider {

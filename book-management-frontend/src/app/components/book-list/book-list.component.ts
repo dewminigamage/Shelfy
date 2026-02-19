@@ -6,6 +6,7 @@ import { BookService, BookFilter } from '../../services/book.service';
 import { Book } from '../../models/book.model';
 import { BookFormComponent } from '../book-form/book-form.component';
 import { BookItemComponent } from '../book-item/book-item.component';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-book-list',
@@ -65,6 +66,7 @@ export class BookListComponent implements OnInit {
     private bookService: BookService,
     private cdr: ChangeDetectorRef,
     private router: Router,
+    public theme: ThemeService,
   ) {}
 
   ngOnInit(): void {

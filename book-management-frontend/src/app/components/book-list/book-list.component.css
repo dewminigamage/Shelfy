@@ -83,7 +83,7 @@
 :host {
   display: block;
   min-height: 100vh;
-  background-color: var(--bg-color);
+  background-color: inherit;
   font-family:
     'Inter',
     system-ui,
@@ -383,6 +383,14 @@
   font-weight: 700;
 }
 
+:host-context(body.dark) .books-info {
+  color: #94a3b8;
+}
+
+:host-context(body.dark) .books-info strong {
+  color: #f1f5f9;
+}
+
 /* Grid Layout */
 .books-grid {
   display: grid;
@@ -440,6 +448,14 @@
 
 .page-info strong {
   color: #212121;
+}
+
+:host-context(body.dark) .page-info {
+  color: #94a3b8;
+}
+
+:host-context(body.dark) .page-info strong {
+  color: #f1f5f9;
 }
 
 /* Modal Overlay common with book-detail */

@@ -83,3 +83,403 @@ select {
   font-family: inherit;
   outline: none;
 }
+
+/* ═══════════════════════════════════════
+   DARK MODE
+   Applied via body.dark class
+═══════════════════════════════════════ */
+body.dark {
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+html.dark,
+body.dark {
+  background-color: #0f172a;
+}
+
+/* ── Theme Toggle Button ─────────────── */
+body.dark .theme-toggle {
+  background: #1e293b;
+  border-color: #334155;
+  color: #f1f5f9;
+}
+
+/* ── Book List ───────────────────────── */
+body.dark .container {
+  background-color: #0f172a;
+}
+
+body.dark .header {
+  border-bottom-color: #1e293b;
+}
+
+body.dark .header h1 {
+  color: #818cf8;
+}
+
+body.dark .filter-bar {
+  background: #1e293b;
+  border-color: #334155;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+body.dark .search-input {
+  background: #0f172a;
+  border-color: #334155;
+  color: #f1f5f9;
+}
+
+body.dark .search-input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+body.dark .search-input::placeholder {
+  color: #475569;
+}
+
+body.dark .search-icon {
+  color: #818cf8;
+}
+
+body.dark .date-range-label {
+  color: #94a3b8;
+}
+
+body.dark .date-inputs {
+  background: #0f172a;
+  border-color: #334155;
+}
+
+body.dark .date-inputs:focus-within {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+  background: #0f172a;
+}
+
+body.dark .date-input {
+  color: #f1f5f9;
+}
+
+body.dark .date-separator {
+  color: #475569;
+}
+
+body.dark .date-input::-webkit-calendar-picker-indicator {
+  filter: invert(1) opacity(0.5);
+}
+
+body.dark .filter-input {
+  background-color: #0f172a;
+  border-color: #334155;
+  color: #f1f5f9;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%2394a3b8' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+}
+
+body.dark .btn-clear-filters {
+  background: #1e293b;
+  border-color: #475569;
+  color: #f1f5f9;
+}
+
+body.dark .btn-clear-filters:hover {
+  background: #263a52;
+  border-color: #f59e0b;
+}
+
+body.dark .btn-add {
+  background: #6366f1;
+  box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.25);
+}
+
+body.dark .btn-add:hover {
+  background: #4f46e5;
+}
+
+body.dark .view-toggles {
+  background: #1e293b;
+}
+
+body.dark .view-toggles button {
+  color: #94a3b8;
+}
+
+body.dark .view-toggles button.active {
+  background: #6366f1;
+  color: #fff;
+}
+
+body.dark .view-toggles button:hover:not(.active) {
+  background: #334155;
+  color: #f1f5f9;
+}
+
+body.dark .books-info {
+  color: #94a3b8;
+}
+
+body.dark .books-info strong {
+  color: #f1f5f9;
+}
+
+body.dark .no-books {
+  background: #1e293b;
+  border-color: #334155;
+  color: #94a3b8;
+}
+
+body.dark .page-btn {
+  background: #1e293b;
+  border-color: #334155;
+  color: #94a3b8;
+}
+
+body.dark .page-btn:hover:not(:disabled) {
+  background: #263a52;
+  border-color: #f59e0b;
+  color: #f1f5f9;
+}
+
+body.dark .page-btn:disabled {
+  background: #1e293b;
+  opacity: 0.4;
+}
+
+body.dark .page-info {
+  color: #94a3b8;
+}
+
+body.dark .page-info strong {
+  color: #f1f5f9;
+}
+
+body.dark .modal-overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+body.dark .modal-content {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+body.dark .alert-error {
+  background: #450a0a;
+  border-color: #7f1d1d;
+  color: #fca5a5;
+}
+
+/* ── Book Card ───────────────────────── */
+body.dark .book-card {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+body.dark .book-card:hover {
+  border-color: #475569;
+}
+
+body.dark .card-image {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+}
+
+body.dark .book-title {
+  color: #f1f5f9;
+}
+
+body.dark .book-author {
+  color: #94a3b8;
+}
+
+body.dark .view-details-btn {
+  background: #1e293b;
+  color: #818cf8;
+}
+
+body.dark .view-details-btn:hover {
+  background: #6366f1;
+  color: #fff;
+}
+
+/* ── Book Detail ─────────────────────── */
+body.dark .detail-page-container {
+  background-color: #0f172a;
+}
+
+body.dark .back-btn {
+  color: #94a3b8;
+}
+
+body.dark .back-btn:hover {
+  color: #818cf8;
+}
+
+body.dark .info-card {
+  background: #1e293b;
+  border-color: #334155;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .info-item .label {
+  color: #64748b;
+}
+
+body.dark .info-item .value {
+  color: #f1f5f9;
+}
+
+body.dark .divider {
+  background-color: #334155;
+}
+
+body.dark .detail-content .book-title {
+  color: #f1f5f9;
+}
+
+body.dark .detail-content .book-author {
+  color: #94a3b8;
+}
+
+body.dark .placeholder-cover {
+  background: #334155;
+  color: #64748b;
+}
+
+body.dark .modal-backdrop {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+body.dark .modal-container {
+  background: #1e293b;
+}
+
+body.dark .modal-body {
+  background: #1e293b;
+}
+
+/* ── Book Form ───────────────────────── */
+body.dark .form-wrapper {
+  background: #1e293b;
+}
+
+body.dark .form-header {
+  border-bottom-color: #334155;
+}
+
+body.dark .form-header h2 {
+  color: #f1f5f9;
+}
+
+body.dark .form-subtitle {
+  color: #64748b;
+}
+
+body.dark .close-btn {
+  background: #0f172a;
+  border-color: #334155;
+  color: #94a3b8;
+}
+
+body.dark .close-btn:hover {
+  background: #450a0a;
+  border-color: #7f1d1d;
+  color: #ef4444;
+}
+
+body.dark .label-text {
+  color: #94a3b8;
+}
+
+body.dark .form-control {
+  background: #0f172a;
+  border-color: #334155;
+  color: #f1f5f9;
+}
+
+body.dark .form-control:hover {
+  border-color: #475569;
+  background: #0f172a;
+}
+
+body.dark .form-control:focus {
+  border-color: #6366f1;
+  background: #0f172a;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+body.dark .form-control::placeholder {
+  color: #334155;
+}
+
+body.dark .form-control.is-invalid {
+  border-color: #ef4444;
+  background: #1c0a0a;
+}
+
+body.dark .field-footer .char-count,
+body.dark .help-text {
+  color: #475569;
+}
+
+body.dark .form-actions {
+  border-top-color: #334155;
+}
+
+body.dark .btn-cancel {
+  background: #1e293b;
+  color: #94a3b8;
+  border-color: #334155;
+}
+
+body.dark .btn-cancel:hover {
+  background: #0f172a;
+  color: #f1f5f9;
+  border-color: #475569;
+}
+
+body.dark .image-preview {
+  border-color: #334155;
+  background: #0f172a;
+}
+
+body.dark .image-preview:hover {
+  border-color: #6366f1;
+  background: #1a1f3a;
+}
+
+body.dark .upload-icon-wrap {
+  background: #1a1f3a;
+  color: #818cf8;
+}
+
+body.dark .upload-label {
+  color: #94a3b8;
+}
+
+body.dark .upload-hint {
+  color: #475569;
+}
+
+/* ── Footer (already dark, keep as-is) ─ */
+
+/* ── Theme Toggle Button ─────────────── */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid #e2e8f0;
+  background: #f8fafc;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  border-color: #6366f1;
+  background: #eff6ff;
+  color: #6366f1;
+}

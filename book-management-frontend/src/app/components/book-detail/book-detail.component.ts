@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { BookService } from '../../services/book.service';
 import { Book } from '../../models/book.model';
 import { BookFormComponent } from '../book-form/book-form.component';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-book-detail',
@@ -50,6 +51,7 @@ export class BookDetailComponent implements OnInit {
     private router: Router,
     private bookService: BookService,
     private cdr: ChangeDetectorRef,
+    public theme: ThemeService,
   ) {}
 
   ngOnInit(): void {
