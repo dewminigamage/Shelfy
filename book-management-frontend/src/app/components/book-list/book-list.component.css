@@ -454,12 +454,23 @@
 
   .date-inputs {
     width: 100%;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .date-input-wrapper {
+    width: 100%;
   }
 
   .date-input {
     min-width: 0;
-    flex: 1;
+    width: 100%;
+    font-size: 1rem; /* Prevents iOS auto-zoom on focus */
+  }
+
+  .date-separator {
+    display: none;
   }
 
   .btn-clear-filters {
