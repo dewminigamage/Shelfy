@@ -1,7 +1,11 @@
 /* Elegant Book Detail Styling */
 
 :host {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    sans-serif;
   color: #0f172a;
   display: block;
   background-color: #f8fafc; /* Matches dashboard layout */
@@ -35,7 +39,7 @@
 }
 
 .back-btn:hover {
-  color: #1976D2;
+  color: #1976d2;
 }
 
 .arrow {
@@ -64,9 +68,9 @@
   max-width: 320px;
   aspect-ratio: 2 / 3;
   border-radius: 8px; /* Slightly rounded corners */
-  box-shadow: 
-    -10px 0 20px rgba(0,0,0,0.1), /* Spine shadow */
-    0 20px 40px rgba(0,0,0,0.2);  /* Drop shadow */
+  box-shadow:
+    -10px 0 20px rgba(0, 0, 0, 0.1),
+    /* Spine shadow */ 0 20px 40px rgba(0, 0, 0, 0.2); /* Drop shadow */
   overflow: hidden;
   position: relative;
   background-color: #e2e8f0; /* Fallback */
@@ -89,7 +93,12 @@
   left: 0;
   bottom: 0;
   width: 12px;
-  background: linear-gradient(to right, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.1) 20%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(0, 0, 0, 0.1) 20%,
+    rgba(0, 0, 0, 0) 100%
+  );
   z-index: 10;
 }
 
@@ -144,9 +153,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between; /* Space out evenly */
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Soft shadow */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Soft shadow */
   margin-bottom: 3rem;
-  border: 1px solid rgba(0,0,0,0.02);
+  border: 1px solid rgba(0, 0, 0, 0.02);
 }
 
 .info-item {
@@ -185,7 +194,8 @@
   gap: 1.5rem;
 }
 
-.btn-primary, .btn-secondary {
+.btn-primary,
+.btn-secondary {
   border: none;
   font-size: 1rem;
   font-weight: 600;
@@ -235,7 +245,6 @@
 .icon {
   font-size: 1.1em;
 }
-
 
 /* Modal Overlay */
 .modal-backdrop {
@@ -302,17 +311,28 @@
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes scaleUp {
-  from { transform: scale(0.95); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 /* Loading & Error */
-.loading-state, .error-state {
+.loading-state,
+.error-state {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -332,7 +352,9 @@
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Mobile Responsive */
@@ -356,7 +378,7 @@
   .book-author {
     justify-content: center;
   }
-  
+
   .info-card {
     flex-direction: column;
     gap: 1.5rem;
@@ -376,11 +398,12 @@
     width: 100%;
   }
 
-  .btn-primary, .btn-secondary {
+  .btn-primary,
+  .btn-secondary {
     width: 100%;
     justify-content: center;
   }
-  
+
   .detail-page-container {
     padding: 1rem;
   }
