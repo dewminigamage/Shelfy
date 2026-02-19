@@ -1,6 +1,12 @@
 <div class="book-card" (click)="onCardClick.emit()">
   <div class="card-image">
-    <img *ngIf="book.imageUrl && !imageError" [src]="book.imageUrl" [alt]="book.title" loading="lazy" (error)="onImageError()" />
+    <img
+      *ngIf="book.imageUrl && !imageError"
+      [src]="book.imageUrl"
+      [alt]="book.title"
+      loading="lazy"
+      (error)="onImageError()"
+    />
     <div *ngIf="!book.imageUrl || imageError" class="placeholder-icon"></div>
     <div class="card-overlay">
       <button class="view-details-btn" (click)="$event.stopPropagation(); onCardClick.emit()">

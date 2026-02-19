@@ -31,3 +31,4 @@ C:\Users\Dewmini Navodya\OneDrive\Documents\Desktop\Shelfy\Shelfy\BookAPI\obj\De
 C:\Users\Dewmini Navodya\OneDrive\Documents\Desktop\Shelfy\Shelfy\BookAPI\obj\Debug\net8.0\BookAPI.pdb
 C:\Users\Dewmini Navodya\OneDrive\Documents\Desktop\Shelfy\Shelfy\BookAPI\obj\Debug\net8.0\BookAPI.genruntimeconfig.cache
 C:\Users\Dewmini Navodya\OneDrive\Documents\Desktop\Shelfy\Shelfy\BookAPI\obj\Debug\net8.0\ref\BookAPI.dll
+C:\Users\Dewmini Navodya\OneDrive\Documents\Desktop\Shelfy\Shelfy\BookAPI\obj\Debug\net8.0\BookAPI.sourcelink.json
