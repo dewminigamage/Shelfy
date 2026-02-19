@@ -16,7 +16,7 @@ export interface BookFilter {
   providedIn: 'root',
 })
 export class BookService {
-  private apiUrl = 'http://localhost:5218/api/books';
+  private apiUrl = 'https://humble-happiness-production.up.railway.app/api/books';
 
   constructor(private http: HttpClient) {}
 
