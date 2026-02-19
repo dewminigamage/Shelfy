@@ -1,0 +1,28 @@
+<div class="book-card" (click)="onCardClick.emit()">
+  <div class="card-image">
+    <img *ngIf="book.imageUrl" [src]="book.imageUrl" [alt]="book.title" loading="lazy" />
+    <div *ngIf="!book.imageUrl" class="placeholder-icon"></div>
+    <div class="card-overlay">
+      <button class="view-details-btn" (click)="$event.stopPropagation(); onCardClick.emit()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="18px"
+          viewBox="0 0 24 24"
+          width="18px"
+          fill="currentColor"
+        >
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path
+            d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
+          />
+        </svg>
+        View Details
+      </button>
+    </div>
+  </div>
+
+  <div class="card-content">
+    <h3 class="book-title" [title]="book.title">{{ book.title }}</h3>
+    <p class="book-author"><span></span> {{ book.author }}</p>
+  </div>
+</div>
