@@ -72,6 +72,26 @@
   gap: 0 1.5rem;
 }
 
+@media (max-width: 540px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+    gap: 0.5rem;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .form-header h2 {
+    font-size: 1.1rem;
+  }
+}
+
 /* ── Form Groups ─────────────────────────── */
 .form-group {
   margin-bottom: 1.25rem;
