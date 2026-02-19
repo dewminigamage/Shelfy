@@ -1,3 +1,60 @@
+<!-- Toast Notification -->
+<div
+  class="toast"
+  [class.toast--visible]="toast.visible"
+  [class.toast--error]="toast.type === 'error'"
+>
+  <span class="toast-icon">
+    <svg
+      *ngIf="toast.type === 'success'"
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <svg
+      *ngIf="toast.type === 'error'"
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <circle cx="12" cy="12" r="10"></circle>
+      <line x1="12" y1="8" x2="12" y2="12"></line>
+      <line x1="12" y1="16" x2="12.01" y2="16"></line>
+    </svg>
+  </span>
+  <span class="toast-message">{{ toast.message }}</span>
+  <button class="toast-close" (click)="dismissToast()" aria-label="Dismiss">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <line x1="18" y1="6" x2="6" y2="18"></line>
+      <line x1="6" y1="6" x2="18" y2="18"></line>
+    </svg>
+  </button>
+</div>
+
 <div class="detail-page-container">
   <div class="header">
     <button class="back-btn" (click)="onBack()">

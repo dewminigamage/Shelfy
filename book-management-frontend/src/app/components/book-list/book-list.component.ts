@@ -21,6 +21,28 @@ export class BookListComponent implements OnInit {
   showForm = false;
   editingBookId: number | null = null;
 
+  toast: { message: string; type: 'success' | 'error'; visible: boolean } = {
+    message: '',
+    type: 'success',
+    visible: false,
+  };
+  private toastTimer: ReturnType<typeof setTimeout> | null = null;
+
+  showToast(message: string, type: 'success' | 'error' = 'success'): void {
+    if (this.toastTimer) clearTimeout(this.toastTimer);
+    this.toast = { message, type, visible: true };
+    this.cdr.markForCheck();
+    this.toastTimer = setTimeout(() => {
+      this.toast.visible = false;
+      this.cdr.markForCheck();
+    }, 3500);
+  }
+
+  dismissToast(): void {
+    if (this.toastTimer) clearTimeout(this.toastTimer);
+    this.toast.visible = false;
+  }
+
   // Filter and search properties
   searchQuery = '';
   // yearFilter = 'all'; // Removed as requested
@@ -144,7 +166,7 @@ export class BookListComponent implements OnInit {
           this.books = this.books.filter((b) => b.id !== bookId);
           this.updatePagination();
           this.cdr.markForCheck();
-          alert('Book deleted successfully!');
+          this.showToast('Book deleted successfully!');
         },
         error: (err) => {
           this.error = 'Failed to delete book';
@@ -187,7 +209,7 @@ export class BookListComponent implements OnInit {
           this.updatePagination(); // Added this
           this.showForm = false;
           this.cdr.markForCheck();
-          alert('Book added successfully!');
+          this.showToast('Book added successfully!');
         },
         error: (err) => {
           this.error = 'Failed to add book';
