@@ -46,7 +46,6 @@ export class BookListComponent implements OnInit {
 
   // Filter and search properties
   searchQuery = '';
-  // yearFilter = 'all'; // Removed as requested
   minDate: string | null = null;
   maxDate: string | null = null;
   sortBy: 'title' | 'author' | 'date' = 'title';
@@ -70,18 +69,15 @@ export class BookListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    console.log('BookListComponent initialized');
     this.loadBooks();
   }
 
   loadBooks(): void {
     this.loading = true;
     this.error = '';
-    console.log('Loading books...');
 
     const filters: BookFilter = {
       searchQuery: this.searchQuery,
-      // yearFilter: this.yearFilter,
       minDate: this.minDate || undefined,
       maxDate: this.maxDate || undefined,
       sortBy: this.sortBy,
@@ -90,14 +86,12 @@ export class BookListComponent implements OnInit {
 
     this.bookService.getAllBooks(filters).subscribe({
       next: (data) => {
-        console.log('Books loaded:', data);
         this.books = data;
         this.updatePagination();
         this.loading = false;
         this.cdr.markForCheck();
       },
-      error: (err) => {
-        console.error('Error loading books:', err);
+      error: (_err) => {
         this.error = 'Failed to load books. Make sure the backend server is running.';
         this.loading = false;
         this.cdr.markForCheck();
@@ -120,8 +114,6 @@ export class BookListComponent implements OnInit {
     if (page >= 1 && page <= this.totalPages) {
       this.currentPage = page;
       this.updatePagination();
-      // Optional: Scroll to top of list
-      // window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }
 
@@ -136,7 +128,6 @@ export class BookListComponent implements OnInit {
 
   onClearFilters(): void {
     this.searchQuery = '';
-    // this.yearFilter = 'all';
     this.minDate = null;
     this.maxDate = null;
     this.sortBy = 'title';
@@ -170,9 +161,8 @@ export class BookListComponent implements OnInit {
           this.cdr.markForCheck();
           this.showToast('Book deleted successfully!');
         },
-        error: (err) => {
+        error: (_err) => {
           this.error = 'Failed to delete book';
-          console.error('Error deleting book:', err);
           this.cdr.markForCheck();
         },
       });
@@ -192,30 +182,27 @@ export class BookListComponent implements OnInit {
           if (index > -1) {
             this.books[index] = updatedBook;
           }
-          this.updatePagination(); // Added this
+          this.updatePagination();
           this.showForm = false;
           this.editingBookId = null;
           this.cdr.markForCheck();
         },
-        error: (err) => {
+        error: (_err) => {
           this.error = 'Failed to update book';
-          console.error('Error updating book:', err);
           this.cdr.markForCheck();
         },
       });
     } else {
       this.bookService.addBook(book).subscribe({
         next: (newBook) => {
-          console.log('Book added:', newBook);
           this.books = [...this.books, newBook];
-          this.updatePagination(); // Added this
+          this.updatePagination();
           this.showForm = false;
           this.cdr.markForCheck();
           this.showToast('Book added successfully!');
         },
-        error: (err) => {
+        error: (_err) => {
           this.error = 'Failed to add book';
-          console.error('Error adding book:', err);
           this.cdr.markForCheck();
         },
       });

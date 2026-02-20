@@ -2,9 +2,9 @@ using BookAPI.Models;
 
 namespace BookAPI.Services
 {
-    public class BookService
+    public class BookService : IBookService
     {
-        private static List<Book> _books = new List<Book>
+        private readonly List<Book> _books = new List<Book>
         {
             new Book 
             { 
@@ -116,11 +116,70 @@ namespace BookAPI.Services
             }
         };
 
-        private static int _nextId = 13;
+        private int _nextId = 13;
 
         public List<Book> GetAllBooks()
         {
             return _books;
+        }
+
+        public List<Book> GetFilteredBooks(
+            string searchQuery,
+            string yearFilter,
+            string sortBy,
+            string sortOrder,
+            DateTime? minDate,
+            DateTime? maxDate)
+        {
+            var books = _books.AsEnumerable();
+
+            if (!string.IsNullOrWhiteSpace(searchQuery))
+            {
+                books = books.Where(b =>
+                    b.Title.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) ||
+                    b.Author.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) ||
+                    b.ISBN.Contains(searchQuery, StringComparison.OrdinalIgnoreCase));
+            }
+
+            if (minDate.HasValue)
+                books = books.Where(b => b.PublicationDate.Date >= minDate.Value.Date);
+
+            if (maxDate.HasValue)
+                books = books.Where(b => b.PublicationDate.Date <= maxDate.Value.Date);
+
+            if (yearFilter != "all")
+            {
+                books = yearFilter.ToLower() switch
+                {
+                    "before2000" => books.Where(b => b.PublicationDate.Year < 2000),
+                    "2000-2010"  => books.Where(b => b.PublicationDate.Year >= 2000 && b.PublicationDate.Year <= 2010),
+                    "after2010"  => books.Where(b => b.PublicationDate.Year > 2010),
+                    _            => books
+                };
+            }
+
+            books = sortBy.ToLower() switch
+            {
+                "author" => sortOrder.ToLower() == "desc"
+                    ? books.OrderByDescending(b => b.Author)
+                    : books.OrderBy(b => b.Author),
+                "date" => sortOrder.ToLower() == "desc"
+                    ? books.OrderByDescending(b => b.PublicationDate)
+                    : books.OrderBy(b => b.PublicationDate),
+                _ => sortOrder.ToLower() == "desc"
+                    ? books.OrderByDescending(b => b.Title)
+                    : books.OrderBy(b => b.Title)
+            };
+
+            return books.ToList();
+        }
+
+        public bool IsISBNUnique(string isbn, int? excludeId = null)
+        {
+            var cleanISBN = isbn.Replace("-", "");
+            return !_books.Any(b =>
+                (!excludeId.HasValue || b.Id != excludeId) &&
+                b.ISBN.Replace("-", "") == cleanISBN);
         }
 
         public Book? GetBookById(int id)

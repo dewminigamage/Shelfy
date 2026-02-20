@@ -10,7 +10,7 @@ builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddSingleton<BookService>();
+builder.Services.AddSingleton<IBookService, BookService>();
 
 // Add CORS
 builder.Services.AddCors(options =>

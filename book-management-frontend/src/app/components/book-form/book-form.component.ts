@@ -47,7 +47,7 @@ export class BookFormComponent implements OnInit {
         const yyyy = d.getFullYear();
         const mm = String(d.getMonth() + 1).padStart(2, '0');
         const dd = String(d.getDate()).padStart(2, '0');
-        (this.formData as any).publicationDate = `${yyyy}-${mm}-${dd}`;
+        this.formData.publicationDate = `${yyyy}-${mm}-${dd}`;
       }
       this.imagePreview = this.book.imageUrl || null;
     }
